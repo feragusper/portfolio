@@ -40,17 +40,36 @@ const skillGroups = [
     skills: [
       "Git", "GitHub Actions", "GitLab CI/CD", "CircleCI",
       "Bitrise", "Jenkins", "Gradle", "Firebase",
+      "Docker", "Kubernetes", "Helm",
       "Bugsnag", "Datadog", "Crashlytics",
+    ],
+  },
+  {
+    category: { en: "Frontend & Multiplatform", es: "Frontend y Multiplataforma" },
+    color: "#0ea5e9",
+    primary: true,
+    skills: [
+      "TypeScript", "Next.js", "React", "Angular",
+      "Compose Multiplatform", "HTML/CSS", "Tailwind CSS",
     ],
   },
   {
     category: { en: "AI & Productivity", es: "IA y Productividad" },
     color: "#ec4899",
-    primary: false,
+    primary: true,
     skills: [
       "Claude", "Gemini / Google AI Studio", "GitHub Copilot",
       "MS Copilot", "Codex", "Lovable",
       "MCP Development", "Suno", "Moises", "Udio",
+    ],
+  },
+  {
+    category: { en: "Backend & Data", es: "Backend y Datos" },
+    color: "#10b981",
+    primary: false,
+    skills: [
+      "KMP (Kotlin Multiplatform)", "Spring Boot", "PostgreSQL",
+      "Node.js", "PHP", "MySQL", "REST APIs", "GraphQL",
     ],
   },
   {
@@ -98,7 +117,7 @@ export default function Skills() {
           <p className="text-[var(--muted)] mt-3 max-w-xl mx-auto">{s.subtitle}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {primary.map((group, gi) => (
             <SkillCard key={group.category.en} group={group} gi={gi} inView={inView} lang={lang} />
           ))}
@@ -113,7 +132,7 @@ export default function Skills() {
               transition={{ duration: 0.35, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <div className="grid md:grid-cols-2 gap-6 mt-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 {secondary.map((group, gi) => (
                   <SkillCard key={group.category.en} group={group} gi={gi + primary.length} inView={inView} lang={lang} />
                 ))}

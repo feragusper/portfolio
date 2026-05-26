@@ -18,12 +18,12 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <AISection />
       <ProfessionalProjects />
       <Projects />
       <Experience />
       <Roles />
       <Hobbies />
-      <AISection />
       <CVDownload />
       <Contact />
     </main>

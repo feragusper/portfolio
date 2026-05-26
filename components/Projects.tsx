@@ -28,8 +28,8 @@ const petProjects: PetProject[] = [
   {
     name: "Harmonia",
     description: {
-      en: "Music theory and harmony explorer — chord progressions, scales, and interval relationships for musicians and composers.",
-      es: "Explorador de teoría musical y armonía — progresiones de acordes, escalas y relaciones de intervalos para músicos y compositores.",
+      en: "Rehearsal and show planner for my piano and voice duo. Manage setlists, track songs, plan rehearsals, and organize upcoming performances.",
+      es: "Planificador de ensayos y shows para mi dúo de piano y voz. Gestiona setlists, canciones, ensayos y próximas actuaciones.",
     },
     tags: ["Kotlin", "Jetpack Compose", "Music"],
     github: "https://github.com/feragusper/harmonia",
@@ -37,16 +37,16 @@ const petProjects: PetProject[] = [
   {
     name: "TuneVid",
     description: {
-      en: "Tool for synchronizing and editing music with video — designed for content creators experimenting at the intersection of audio and visual media.",
-      es: "Herramienta para sincronizar y editar música con video — diseñada para creadores de contenido que experimentan en la intersección del audio y los medios visuales.",
+      en: "Built during the pandemic to detect COVID-19 using special sound frequencies emitted by the device. An exploration of audio signal processing for health screening.",
+      es: "Construido durante la pandemia para detectar COVID-19 mediante frecuencias de sonido especiales. Exploración del procesamiento de señales de audio para screening de salud.",
     },
-    tags: ["Kotlin", "Android SDK", "Media", "Audio"],
+    tags: ["Kotlin", "Android SDK", "Audio", "Signal Processing"],
     github: "https://github.com/feragusper/TuneVid",
   },
   {
     name: "Buenos Aires Antes y Después",
     description: {
-      en: "Side-by-side historical photo comparison of Buenos Aires neighborhoods — before and after views that document the city's transformation over decades.",
+      en: "Side-by-side historical photo comparison of Buenos Aires neighborhoods — before and after views documenting the city's transformation over decades.",
       es: "Comparación fotográfica histórica de barrios de Buenos Aires — vistas antes y después que documentan la transformación de la ciudad a lo largo de décadas.",
     },
     tags: ["Android SDK", "Photos", "Buenos Aires"],
@@ -55,17 +55,17 @@ const petProjects: PetProject[] = [
   {
     name: "Barrani",
     description: {
-      en: "Personal project exploring native Android development with a focus on clean, minimal UI and smooth user experience.",
-      es: "Proyecto personal que explora el desarrollo Android nativo con enfoque en UI limpia, minimalista y experiencia de usuario fluida.",
+      en: "Personal finance app for managing accounts, expenses, income, investments, profitability, and financial forecasting.",
+      es: "App de finanzas personales para gestionar cuentas, gastos, ingresos, inversiones, rentabilidad y planificación financiera.",
     },
-    tags: ["Kotlin", "Android SDK", "Jetpack Compose"],
+    tags: ["Kotlin", "Jetpack Compose", "Finance"],
     github: "https://github.com/feragusper/barrani",
   },
   {
     name: "Comidas Pérez Edelberg",
     description: {
-      en: "Family recipe book — a personal web app to preserve and share family recipes across generations.",
-      es: "Recetario familiar — una app web personal para preservar y compartir recetas de familia entre generaciones.",
+      en: "Family meal planner built around our household's specific dietary rules and use cases — for the three of us, each with different needs.",
+      es: "Planificador de comidas familiar diseñado en torno a las reglas y casos de uso específicos de nuestra familia, los tres con necesidades distintas.",
     },
     tags: ["Web", "Next.js", "TypeScript", "Family"],
     github: "https://github.com/feragusper/comidas-perez-edelberg",

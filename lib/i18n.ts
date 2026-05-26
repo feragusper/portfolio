@@ -38,7 +38,7 @@ export const translations = {
       showLess: "Show less",
     },
     work: {
-      label: "03 / work",
+      label: "04 / work",
       title: "Professional Work",
       subtitle: "Real-world products I helped build — from private jets to Latin America's biggest marketplace.",
       showMore: (n: number) => `Show ${n} more projects`,
@@ -46,20 +46,20 @@ export const translations = {
       playStore: "Play Store",
     },
     projects: {
-      label: "04 / projects",
+      label: "05 / projects",
       title: "Pet Projects",
       subtitle: "Personal experiments and tools built in my spare time.",
       github: "View all on GitHub",
       featured: "featured",
     },
     experience: {
-      label: "05 / experience",
+      label: "06 / experience",
       title: "Work History",
       subtitle: "20+ years across three distinct chapters — each one shaped by a different kind of challenge.",
       education: "Education",
     },
     roles: {
-      label: "06 / roles",
+      label: "07 / roles",
       title: "Two Tracks, One Career",
       subtitle: "Grew simultaneously as an engineer and as a leader — two tracks that reinforced each other.",
       engineer: "The Engineer",
@@ -94,7 +94,7 @@ export const translations = {
       },
     },
     life: {
-      label: "07 / life",
+      label: "08 / life",
       title: "Beyond the Code",
       subtitle: "What I do when I'm not building software.",
       musicalTraining: "Classical training",
@@ -108,7 +108,7 @@ export const translations = {
       cookingDesc: "In the kitchen as in code — the best results come from patience, quality ingredients, and iteration.",
     },
     ai: {
-      label: "08 / ai",
+      label: "03 / ai",
       title: "AI Is How I Build Now",
       subtitle: "Not a side experiment. A core part of how I work, create, and think about software.",
       pitch: "AI changed everything — and I was already there. I've been integrating AI tools into my daily workflow for years: writing and reviewing code, automating repetitive tasks, building agentic pipelines, and experimenting with generative models for music production. This isn't hype adoption — it's disciplined, practical use that has made me measurably faster and more effective.",
@@ -196,7 +196,7 @@ export const translations = {
       showLess: "Ver menos",
     },
     work: {
-      label: "03 / trabajo",
+      label: "04 / trabajo",
       title: "Trabajo Profesional",
       subtitle: "Productos reales en los que colaboré — desde jets privados hasta el marketplace más grande de Latinoamérica.",
       showMore: (n: number) => `Ver ${n} proyectos más`,
@@ -204,20 +204,20 @@ export const translations = {
       playStore: "Play Store",
     },
     projects: {
-      label: "04 / proyectos",
+      label: "05 / proyectos",
       title: "Pet Projects",
       subtitle: "Experimentos personales y herramientas construidas en mi tiempo libre.",
       github: "Ver todos en GitHub",
       featured: "destacado",
     },
     experience: {
-      label: "05 / experiencia",
+      label: "06 / experiencia",
       title: "Trayectoria",
       subtitle: "20+ años en tres capítulos distintos — cada uno moldeado por un tipo diferente de desafío.",
       education: "Educación",
     },
     roles: {
-      label: "06 / roles",
+      label: "07 / roles",
       title: "Dos Tracks, Una Carrera",
       subtitle: "Crecí simultáneamente como ingeniero y como líder — dos tracks que se potenciaron mutuamente.",
       engineer: "El Ingeniero",
@@ -252,7 +252,7 @@ export const translations = {
       },
     },
     life: {
-      label: "07 / vida",
+      label: "08 / vida",
       title: "Más Allá del Código",
       subtitle: "Lo que hago cuando no estoy construyendo software.",
       musicalTraining: "Formación clásica",
@@ -266,7 +266,7 @@ export const translations = {
       cookingDesc: "En la cocina como en el código — los mejores resultados vienen de la paciencia, los ingredientes de calidad y la iteración.",
     },
     ai: {
-      label: "08 / ia",
+      label: "03 / ia",
       title: "Así construyo ahora: con IA",
       subtitle: "No es un experimento lateral. Es una parte central de cómo trabajo, creo y pienso el software.",
       pitch: "La IA cambió todo — y yo ya estaba ahí. Llevo años integrando herramientas de IA en mi flujo diario: escribiendo y revisando código, automatizando tareas repetitivas, construyendo pipelines agénticos y experimentando con modelos generativos también en producción musical. No es adopción por hype — es uso disciplinado y práctico que me hace mediblemente más rápido y efectivo.",

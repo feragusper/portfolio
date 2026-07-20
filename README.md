@@ -84,6 +84,17 @@ Open http://localhost:3000.
 
 No environment variables are required to run or build the site — it is fully static and content-driven. `metadataBase` (the canonical URL used for OG/Twitter) is hard-coded in [`app/layout.tsx`](app/layout.tsx); update it there if the domain changes.
 
+### Analytics (optional)
+
+[Umami](https://umami.is) analytics is wired up but only activates when a website ID is present (see `.env.local.example`):
+
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Umami website ID. If unset, no analytics script is rendered. |
+| `NEXT_PUBLIC_UMAMI_SRC` | Optional script URL override for self-hosted Umami (defaults to Umami Cloud). |
+
+Tracking lives in `components/Analytics.tsx` (script loading, scroll-depth milestones, per-section views via IntersectionObserver) and `lib/umami.ts` (typed `track()` helper). Links and buttons are tagged with `data-umami-event` attributes: `nav-click`, `hero-cta`, `social-click`, `project-click`, `playstore-click`, `cv-download`, `language-toggle`, `theme-toggle`, `work-toggle`, `mobile-menu-toggle`.
+
 `.env*` files are gitignored, so any future secrets stay out of version control.
 
 ---

@@ -63,14 +63,23 @@ export default function Navbar() {
       style={scrolled ? { backgroundColor: "var(--nav-bg)" } : undefined}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-[var(--text-heading)] font-bold text-lg tracking-tight hover:text-[var(--accent)] transition-colors">
+        <a
+          href="#"
+          data-umami-event="nav-logo-click"
+          className="text-[var(--text-heading)] font-bold text-lg tracking-tight hover:text-[var(--accent)] transition-colors"
+        >
           fp<span className="text-[var(--accent)]">.</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-6">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="text-sm text-[var(--muted)] hover:text-[var(--text-heading)] transition-colors duration-200">
+              <a
+                href={link.href}
+                data-umami-event="nav-click"
+                data-umami-event-section={link.href.replace("#", "")}
+                className="text-sm text-[var(--muted)] hover:text-[var(--text-heading)] transition-colors duration-200"
+              >
                 {link.label}
               </a>
             </li>
@@ -81,6 +90,8 @@ export default function Navbar() {
           {/* Language toggle */}
           <button
             onClick={() => setLang(lang === "en" ? "es" : "en")}
+            data-umami-event="language-toggle"
+            data-umami-event-to={lang === "en" ? "es" : "en"}
             className="hidden md:flex items-center gap-1 px-2.5 py-1.5 rounded-md border border-[var(--border)] text-xs font-mono text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all duration-200"
             aria-label="Toggle language"
           >
@@ -91,6 +102,8 @@ export default function Navbar() {
           {mounted && (
             <button
               onClick={() => setTheme(isDark ? "light" : "dark")}
+              data-umami-event="theme-toggle"
+              data-umami-event-to={isDark ? "light" : "dark"}
               className="hidden md:flex items-center justify-center w-8 h-8 rounded-md border border-[var(--border)] text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all duration-200"
               aria-label="Toggle theme"
             >
@@ -103,6 +116,9 @@ export default function Navbar() {
             href="https://github.com/feragusper"
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="social-click"
+            data-umami-event-network="github"
+            data-umami-event-location="navbar"
             className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[var(--border)] text-sm text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all duration-200"
           >
             GitHub
@@ -112,6 +128,8 @@ export default function Navbar() {
           <button
             className="md:hidden text-[var(--muted)] hover:text-[var(--text-heading)]"
             onClick={() => setMenuOpen(!menuOpen)}
+            data-umami-event="mobile-menu-toggle"
+            data-umami-event-action={menuOpen ? "close" : "open"}
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,6 +154,9 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
+              data-umami-event="nav-click"
+              data-umami-event-section={link.href.replace("#", "")}
+              data-umami-event-menu="mobile"
               className="block py-2 text-sm text-[var(--muted)] hover:text-[var(--text-heading)] transition-colors"
               onClick={() => setMenuOpen(false)}
             >
@@ -145,6 +166,8 @@ export default function Navbar() {
           <div className="flex items-center gap-2 pt-3 border-t border-[var(--border)] mt-2">
             <button
               onClick={() => setLang(lang === "en" ? "es" : "en")}
+              data-umami-event="language-toggle"
+              data-umami-event-to={lang === "en" ? "es" : "en"}
               className="flex items-center gap-1 px-2.5 py-1.5 rounded-md border border-[var(--border)] text-xs font-mono text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
             >
               {lang === "en" ? "ES" : "EN"}
@@ -152,6 +175,8 @@ export default function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(isDark ? "light" : "dark")}
+                data-umami-event="theme-toggle"
+                data-umami-event-to={isDark ? "light" : "dark"}
                 className="flex items-center justify-center w-8 h-8 rounded-md border border-[var(--border)] text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
               >
                 {isDark ? <SunIcon /> : <MoonIcon />}

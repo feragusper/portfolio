@@ -373,7 +373,14 @@ export default function ProfessionalProjects() {
               <div className="flex items-center justify-between pt-2 border-t border-[var(--border)]">
                 <span className="text-xs font-mono text-[var(--muted)]">{project.period}</span>
                 {project.link && (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-xs text-[#6c63ff] hover:text-[var(--text-heading)] transition-colors flex items-center gap-1">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-umami-event="playstore-click"
+                    data-umami-event-client={project.client}
+                    className="text-xs text-[#6c63ff] hover:text-[var(--text-heading)] transition-colors flex items-center gap-1"
+                  >
                     {t.work.playStore} <LinkIcon />
                   </a>
                 )}
@@ -415,7 +422,14 @@ export default function ProfessionalProjects() {
               <div className="flex items-center justify-between pt-2 border-t border-[var(--border)]">
                 <span className="text-xs font-mono text-[var(--muted)]">{project.period}</span>
                 {project.link && (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-xs text-[#6c63ff] hover:text-[var(--text-heading)] transition-colors flex items-center gap-1">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-umami-event="playstore-click"
+                    data-umami-event-client={project.client}
+                    className="text-xs text-[#6c63ff] hover:text-[var(--text-heading)] transition-colors flex items-center gap-1"
+                  >
                     {t.work.playStore} <LinkIcon />
                   </a>
                 )}
@@ -433,6 +447,8 @@ export default function ProfessionalProjects() {
         >
           <button
             onClick={() => setShowAll((v) => !v)}
+            data-umami-event="work-toggle"
+            data-umami-event-action={showAll ? "show-less" : "show-more"}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[var(--border)] text-sm text-[var(--muted)] hover:border-[#6c63ff]/40 hover:text-[var(--text-heading)] transition-all duration-200"
           >
             {showAll ? (

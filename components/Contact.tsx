@@ -65,6 +65,9 @@ export default function Contact() {
                 href={link.href}
                 target={link.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
+                data-umami-event="social-click"
+                data-umami-event-network={link.label.toLowerCase()}
+                data-umami-event-location="contact"
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: i * 0.1 }}

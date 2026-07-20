@@ -97,6 +97,9 @@ export default function Projects() {
           href={featured.github}
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="project-click"
+          data-umami-event-project={featured.name}
+          data-umami-event-featured="true"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -141,6 +144,8 @@ export default function Projects() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
+              data-umami-event="project-click"
+              data-umami-event-project={project.name}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.45, delay: 0.2 + i * 0.07 }}
@@ -182,6 +187,9 @@ export default function Projects() {
             href="https://github.com/feragusper"
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="social-click"
+            data-umami-event-network="github"
+            data-umami-event-location="projects"
             className="inline-flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--text-heading)] transition-colors"
           >
             {t.projects.github}

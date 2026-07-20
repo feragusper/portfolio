@@ -100,6 +100,8 @@ export default function CVDownload() {
                 <a
                   href={opt.file}
                   download={opt.filename}
+                  data-umami-event="cv-download"
+                  data-umami-event-variant={opt.id}
                   style={{ color: "#ffffff", backgroundColor: opt.accent }}
                   className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:opacity-90 group-hover:shadow-lg"
                 >

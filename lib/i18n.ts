@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       about: "About",
       work: "Work",
+      projects: "Projects",
       experience: "Experience",
       roles: "Roles",
       life: "Life",
@@ -51,6 +52,8 @@ export const translations = {
       subtitle: "Personal experiments and tools built in my spare time.",
       github: "View all on GitHub",
       featured: "featured",
+      viewAll: "Browse the full catalog",
+      backHome: "Back to portfolio",
     },
     experience: {
       label: "06 / experience",
@@ -163,6 +166,7 @@ export const translations = {
     nav: {
       about: "Sobre mí",
       work: "Trabajo",
+      projects: "Proyectos",
       experience: "Experiencia",
       roles: "Roles",
       life: "Vida",
@@ -209,6 +213,8 @@ export const translations = {
       subtitle: "Experimentos personales y herramientas construidas en mi tiempo libre.",
       github: "Ver todos en GitHub",
       featured: "destacado",
+      viewAll: "Ver catálogo completo",
+      backHome: "Volver al portfolio",
     },
     experience: {
       label: "06 / experiencia",

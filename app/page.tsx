@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import ProfessionalProjects from "@/components/ProfessionalProjects";
-import Projects from "@/components/Projects";
+import ProjectsTeaser from "@/components/ProjectsTeaser";
 import Experience from "@/components/Experience";
 import Roles from "@/components/Roles";
 import Hobbies from "@/components/Hobbies";
@@ -20,7 +20,7 @@ export default function Home() {
       <Skills />
       <AISection />
       <ProfessionalProjects />
-      <Projects />
+      <ProjectsTeaser />
       <Experience />
       <Roles />
       <Hobbies />

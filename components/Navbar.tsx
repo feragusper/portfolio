@@ -40,14 +40,15 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { label: t.nav.about, href: "#about" },
-    { label: t.nav.ai, href: "#ai" },
-    { label: t.nav.work, href: "#work" },
-    { label: t.nav.experience, href: "#experience" },
-    { label: t.nav.roles, href: "#roles" },
-    { label: t.nav.life, href: "#life" },
-    { label: t.nav.cv, href: "#cv" },
-    { label: t.nav.contact, href: "#contact" },
+    { label: t.nav.about, href: "/#about" },
+    { label: t.nav.ai, href: "/#ai" },
+    { label: t.nav.work, href: "/#work" },
+    { label: t.nav.projects, href: "/projects" },
+    { label: t.nav.experience, href: "/#experience" },
+    { label: t.nav.roles, href: "/#roles" },
+    { label: t.nav.life, href: "/#life" },
+    { label: t.nav.cv, href: "/#cv" },
+    { label: t.nav.contact, href: "/#contact" },
   ];
 
   const isDark = theme === "dark";
@@ -64,7 +65,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a
-          href="#"
+          href="/"
           data-umami-event="nav-logo-click"
           className="text-[var(--text-heading)] font-bold text-lg tracking-tight hover:text-[var(--accent)] transition-colors"
         >
@@ -77,7 +78,7 @@ export default function Navbar() {
               <a
                 href={link.href}
                 data-umami-event="nav-click"
-                data-umami-event-section={link.href.replace("#", "")}
+                data-umami-event-section={link.href.replace(/^\/#?/, "")}
                 className="text-sm text-[var(--muted)] hover:text-[var(--text-heading)] transition-colors duration-200"
               >
                 {link.label}
@@ -155,7 +156,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               data-umami-event="nav-click"
-              data-umami-event-section={link.href.replace("#", "")}
+              data-umami-event-section={link.href.replace(/^\/#?/, "")}
               data-umami-event-menu="mobile"
               className="block py-2 text-sm text-[var(--muted)] hover:text-[var(--text-heading)] transition-colors"
               onClick={() => setMenuOpen(false)}

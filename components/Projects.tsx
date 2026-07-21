@@ -62,6 +62,33 @@ const petProjects: PetProject[] = [
     github: "https://github.com/feragusper/barrani",
   },
   {
+    name: "Labulog",
+    description: {
+      en: "Job-application tracker with market intel: pipeline stages, per-application timeline, metrics like response and interview rates, and an anti ghost-job lookup by posting URL.",
+      es: "Tracker de búsquedas laborales con inteligencia de mercado: pipeline por etapas, timeline por aplicación, métricas de respuesta y entrevistas, y lookup anti ghost-job por URL.",
+    },
+    tags: ["TypeScript", "Web", "Job Hunting"],
+    github: "https://github.com/feragusper/labulog",
+  },
+  {
+    name: "Calendar Insights",
+    description: {
+      en: "Analytics for Google Calendar — visualize where your time actually goes: meetings, focus time, and trends over weeks and months.",
+      es: "Analytics para Google Calendar — visualizá a dónde se va tu tiempo: reuniones, tiempo de foco y tendencias a lo largo de semanas y meses.",
+    },
+    tags: ["TypeScript", "Next.js", "Google Calendar API"],
+    github: "https://github.com/feragusper/CalendarInsights",
+  },
+  {
+    name: "Portfolio",
+    description: {
+      en: "This very site. Personal portfolio built with Next.js, Tailwind CSS and Framer Motion, with bilingual content, dark mode, and Umami analytics.",
+      es: "Este mismo sitio. Portfolio personal construido con Next.js, Tailwind CSS y Framer Motion, con contenido bilingüe, dark mode y analytics con Umami.",
+    },
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    github: "https://github.com/feragusper/portfolio",
+  },
+  {
     name: "Comidas Pérez Edelberg",
     description: {
       en: "Family meal planner built around our household's specific dietary rules and use cases — for the three of us, each with different needs.",

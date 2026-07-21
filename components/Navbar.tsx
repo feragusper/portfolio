@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll } from "framer-motion";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -43,7 +44,6 @@ export default function Navbar() {
     { label: t.nav.about, href: "/#about" },
     { label: t.nav.ai, href: "/#ai" },
     { label: t.nav.work, href: "/#work" },
-    { label: t.nav.projects, href: "/projects" },
     { label: t.nav.experience, href: "/#experience" },
     { label: t.nav.roles, href: "/#roles" },
     { label: t.nav.life, href: "/#life" },
@@ -85,6 +85,17 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+          <li aria-hidden className="w-px h-4 bg-[var(--border)]" />
+          <li>
+            <Link
+              href="/projects"
+              data-umami-event="nav-click"
+              data-umami-event-section="pet-projects"
+              className="text-sm text-[var(--accent)] hover:opacity-70 transition-opacity duration-200"
+            >
+              {t.nav.petProjects}
+            </Link>
+          </li>
         </ul>
 
         <div className="flex items-center gap-2">
@@ -164,6 +175,16 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <Link
+            href="/projects"
+            data-umami-event="nav-click"
+            data-umami-event-section="pet-projects"
+            data-umami-event-menu="mobile"
+            className="block py-2 mt-2 border-t border-[var(--border)] pt-3 text-sm text-[var(--accent)] hover:opacity-70 transition-opacity"
+            onClick={() => setMenuOpen(false)}
+          >
+            {t.nav.petProjects}
+          </Link>
           <div className="flex items-center gap-2 pt-3 border-t border-[var(--border)] mt-2">
             <button
               onClick={() => setLang(lang === "en" ? "es" : "en")}

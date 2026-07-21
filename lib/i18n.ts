@@ -5,7 +5,7 @@ export const translations = {
     nav: {
       about: "About",
       work: "Work",
-      projects: "Projects",
+      petProjects: "Pet Projects",
       experience: "Experience",
       roles: "Roles",
       life: "Life",
@@ -47,22 +47,21 @@ export const translations = {
       playStore: "Play Store",
     },
     projects: {
-      label: "05 / projects",
+      label: "pet projects",
       title: "Pet Projects",
       subtitle: "Personal experiments and tools built in my spare time.",
       github: "View all on GitHub",
       featured: "featured",
-      viewAll: "Browse the full catalog",
       backHome: "Back to portfolio",
     },
     experience: {
-      label: "06 / experience",
+      label: "05 / experience",
       title: "Work History",
       subtitle: "20+ years, three chapters, each one pretty different from the last.",
       education: "Education",
     },
     roles: {
-      label: "07 / roles",
+      label: "06 / roles",
       title: "Two Tracks, One Career",
       subtitle: "Engineer and leader track running in parallel throughout my career.",
       engineer: "The Engineer",
@@ -97,7 +96,7 @@ export const translations = {
       },
     },
     life: {
-      label: "08 / life",
+      label: "07 / life",
       title: "Beyond the Code",
       subtitle: "What I do when I'm not building software.",
       musicalTraining: "Classical training",
@@ -131,7 +130,7 @@ export const translations = {
       },
     },
     cv: {
-      label: "09 / resume",
+      label: "08 / resume",
       title: "Download CV",
       subtitle: "Pick the format that works best for you.",
       download: "Download",
@@ -154,7 +153,7 @@ export const translations = {
       },
     },
     contact: {
-      label: "10 / contact",
+      label: "09 / contact",
       h1: "Let's build something",
       h2: "great together",
       subtitle: "Open to senior engineering roles, mobile consulting, and interesting projects. Working remotely worldwide.",
@@ -166,7 +165,7 @@ export const translations = {
     nav: {
       about: "Sobre mí",
       work: "Trabajo",
-      projects: "Proyectos",
+      petProjects: "Pet Projects",
       experience: "Experiencia",
       roles: "Roles",
       life: "Vida",
@@ -208,22 +207,21 @@ export const translations = {
       playStore: "Play Store",
     },
     projects: {
-      label: "05 / proyectos",
+      label: "pet projects",
       title: "Pet Projects",
       subtitle: "Experimentos personales y herramientas construidas en mi tiempo libre.",
       github: "Ver todos en GitHub",
       featured: "destacado",
-      viewAll: "Ver catálogo completo",
       backHome: "Volver al portfolio",
     },
     experience: {
-      label: "06 / experiencia",
+      label: "05 / experiencia",
       title: "Trayectoria",
       subtitle: "20+ años, tres capítulos, cada uno bastante diferente del anterior.",
       education: "Educación",
     },
     roles: {
-      label: "07 / roles",
+      label: "06 / roles",
       title: "Dos Tracks, Una Carrera",
       subtitle: "Track de ingeniero y de líder corriendo en paralelo a lo largo de toda mi carrera.",
       engineer: "El Ingeniero",
@@ -258,7 +256,7 @@ export const translations = {
       },
     },
     life: {
-      label: "08 / vida",
+      label: "07 / vida",
       title: "Más Allá del Código",
       subtitle: "Lo que hago cuando no estoy construyendo software.",
       musicalTraining: "Formación clásica",
@@ -292,7 +290,7 @@ export const translations = {
       },
     },
     cv: {
-      label: "09 / currículum",
+      label: "08 / currículum",
       title: "Descargar CV",
       subtitle: "Elegí el formato que mejor se adapte a tu necesidad.",
       download: "Descargar",
@@ -315,7 +313,7 @@ export const translations = {
       },
     },
     contact: {
-      label: "10 / contacto",
+      label: "09 / contacto",
       h1: "Construyamos algo",
       h2: "grandioso juntos",
       subtitle: "Abierto a roles senior de ingeniería, consultoría mobile y proyectos interesantes. Trabajo remoto en todo el mundo.",

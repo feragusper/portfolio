@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -208,8 +209,19 @@ export default function Projects() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.65 }}
-          className="text-center mt-8"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-8"
         >
+          <Link
+            href="/"
+            data-umami-event="projects-back-home"
+            className="inline-flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--text-heading)] transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+            </svg>
+            {t.projects.backHome}
+          </Link>
+
           <a
             href="https://github.com/feragusper"
             target="_blank"

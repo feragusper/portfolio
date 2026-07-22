@@ -49,10 +49,13 @@ export const translations = {
     projects: {
       label: "pet projects",
       title: "Pet Projects",
-      subtitle: "Personal experiments and tools built in my spare time.",
+      subtitle: "Personal experiments and real tools I build in my spare time — most of them running in production.",
       github: "View all on GitHub",
       featured: "featured",
       backHome: "Back to portfolio",
+      links: { site: "Site", live: "Live", code: "Code", press: "Press" },
+      private: "Private",
+      liveBadge: "Live",
     },
     experience: {
       label: "05 / experience",
@@ -209,10 +212,13 @@ export const translations = {
     projects: {
       label: "pet projects",
       title: "Pet Projects",
-      subtitle: "Experimentos personales y herramientas construidas en mi tiempo libre.",
+      subtitle: "Experimentos personales y herramientas reales que construyo en mi tiempo libre — la mayoría corriendo en producción.",
       github: "Ver todos en GitHub",
       featured: "destacado",
       backHome: "Volver al portfolio",
+      links: { site: "Sitio", live: "Demo", code: "Código", press: "Prensa" },
+      private: "Privado",
+      liveBadge: "Online",
     },
     experience: {
       label: "05 / experiencia",

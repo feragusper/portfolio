@@ -89,8 +89,8 @@ export default function AISection() {
 
   return (
     <section id="ai" className="py-24 px-6 relative overflow-hidden" ref={ref}>
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[var(--bg)]" />
+      {/* Background decoration — translucent so the blueprint shows through */}
+      <div className="absolute inset-0" style={{ backgroundColor: "color-mix(in srgb, var(--bg) 70%, transparent)" }} />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6c63ff]/40 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6c63ff]/20 to-transparent" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#6c63ff] opacity-[0.04] blur-[100px] pointer-events-none" />

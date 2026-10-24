@@ -13,6 +13,10 @@
   --text-subtle:   #a0a0b8;
   --muted:         #6e6e8a;
   --nav-bg:        rgba(10, 10, 15, 0.9);
+  /* Blueprint backdrop */
+  --bp-line:       rgba(108, 99, 255, 0.07);
+  --bp-orb:        rgba(108, 99, 255, 0.14);
+  --bp-orb-2:      rgba(236, 72, 153, 0.10);
 }
 
 /* ── Light theme ──────────────────────────────────────── */
@@ -28,18 +32,28 @@
   --text-subtle:   #555570;
   --muted:         #888899;
   --nav-bg:        rgba(255, 255, 255, 0.9);
+  /* Blueprint backdrop */
+  --bp-line:       rgba(108, 99, 255, 0.10);
+  --bp-orb:        rgba(108, 99, 255, 0.12);
+  --bp-orb-2:      rgba(236, 72, 153, 0.08);
 }
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* The opaque page color lives on <html> so the fixed blueprint backdrop
+   (-z-10) can show through the transparent <body>. */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  transition: background-color 0.2s ease;
+}
 
 body {
-  background-color: var(--bg);
+  background-color: transparent;
   color: var(--text);
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 ::selection {
@@ -60,3 +74,97 @@ body {
 }
 
 .glow { box-shadow: 0 0 40px var(--accent-glow); }
+
+/* ── Living blueprint backdrop ────────────────────────── */
+.living-bg__grid {
+  background-image:
+    linear-gradient(var(--bp-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bp-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: bp-grid-drift 24s linear infinite;
+  mask-image: radial-gradient(ellipse 120% 80% at 50% 40%, #000 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 120% 80% at 50% 40%, #000 55%, transparent 100%);
+}
+
+.living-bg__orb {
+  border-radius: 9999px;
+  filter: blur(90px);
+  will-change: transform, opacity;
+}
+.living-bg__orb--1 {
+  top: -8%;
+  right: -6%;
+  width: 46vw;
+  height: 46vw;
+  max-width: 620px;
+  max-height: 620px;
+  background: radial-gradient(circle, var(--bp-orb) 0%, transparent 70%);
+  animation: bp-orb-breathe 12s ease-in-out infinite;
+}
+.living-bg__orb--2 {
+  bottom: -10%;
+  left: -8%;
+  width: 40vw;
+  height: 40vw;
+  max-width: 520px;
+  max-height: 520px;
+  background: radial-gradient(circle, var(--bp-orb-2) 0%, transparent 70%);
+  animation: bp-orb-breathe 15s ease-in-out infinite reverse;
+}
+
+.living-bg__cross {
+  opacity: 0;
+  animation: bp-cross-twinkle 7s ease-in-out infinite;
+}
+
+.living-bg__ruler { opacity: 0.6; }
+.living-bg__tick { animation: bp-tick-pulse 4s ease-in-out infinite; }
+
+.living-bg__vignette {
+  background: linear-gradient(
+    to bottom,
+    var(--bg) 0%,
+    transparent 12%,
+    transparent 88%,
+    var(--bg) 100%
+  );
+}
+
+@keyframes bp-grid-drift {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: 48px 48px, 48px 48px; }
+}
+@keyframes bp-orb-breathe {
+  0%, 100% { transform: scale(1);    opacity: 0.75; }
+  50%      { transform: scale(1.18); opacity: 1; }
+}
+@keyframes bp-cross-twinkle {
+  0%, 100% { opacity: 0;    transform: scale(0.7); }
+  50%      { opacity: 0.55; transform: scale(1); }
+}
+@keyframes bp-tick-pulse {
+  0%, 100% { opacity: 0.4; width: 0.75rem; }
+  50%      { opacity: 1;   width: 1.25rem; }
+}
+
+/* Translucent section so the blueprint stays visible behind "surface" blocks */
+.section-tinted {
+  background-color: color-mix(in srgb, var(--surface) 80%, transparent);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+/* Animated gradient underline for links / headings */
+@keyframes bp-sheen {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .living-bg__grid,
+  .living-bg__orb,
+  .living-bg__cross,
+  .living-bg__tick { animation: none !important; }
+  .living-bg__cross { opacity: 0.35; }
+}

@@ -38,7 +38,7 @@ export default function Roles() {
   const leaderLevels = [t.roles.levels.tl, t.roles.levels.pl, t.roles.levels.tm, t.roles.levels.pjl];
 
   return (
-    <section id="roles" className="py-24 px-6 bg-[var(--surface)]" ref={ref}>
+    <section id="roles" className="py-24 px-6 section-tinted" ref={ref}>
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import Analytics from "@/components/Analytics";
+import LivingBackground from "@/components/LivingBackground";
 
 export const metadata: Metadata = {
   title: "Fernando Pérez — Software Engineer",
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <body className="min-h-full flex flex-col antialiased">
+        <LivingBackground />
         <Providers>{children}</Providers>
         <Analytics />
       </body>

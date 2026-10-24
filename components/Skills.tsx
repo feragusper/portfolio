@@ -104,7 +104,7 @@ export default function Skills() {
   const secondary = skillGroups.filter((g) => !g.primary);
 
   return (
-    <section id="skills" className="py-24 px-6 bg-[var(--surface)]" ref={ref}>
+    <section id="skills" className="py-24 px-6 section-tinted" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
